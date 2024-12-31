@@ -34,7 +34,7 @@ const Game: React.FC<GameProps> = ({ userId, username, roomId, setRoomId }) => {
   const [isGameStarted, setIsGameStarted] = useState(false);
 
   useEffect(() => {
-    socket = io("https://tic-tac-toe-7u0u.onrender.com", {
+    socket = io("https://tic-tac-toe-vercel-backend.vercel.app", {
       withCredentials: true,
     });
 
