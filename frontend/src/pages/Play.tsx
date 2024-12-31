@@ -15,20 +15,23 @@ const Play: React.FC = () => {
   const [roomId, setRoomId] = useState<string>("");
 
   const logOut = async (): Promise<void> => {
-    await fetch(`https://tic-tac-toe-7u0u.onrender.com/api/users/logout`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    });
+    await fetch(
+      `https://tic-tac-toe-vercel-backend.vercel.app/api/users/logout`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      }
+    );
     navigate("/signIn");
   };
 
   const loadProfile = async (): Promise<void> => {
     try {
       const res = await fetch(
-        `https://tic-tac-toe-7u0u.onrender.com/api/users/play`,
+        `https://tic-tac-toe-vercel-backend.vercel.app/api/users/play`,
         {
           method: "GET",
           headers: {

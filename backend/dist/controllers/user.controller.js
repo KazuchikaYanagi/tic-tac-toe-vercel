@@ -88,7 +88,6 @@ const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         // req.session!.userId = user.id.toString();
         console.log("Session after login:", req.session);
         res.json({ message: "Login successful" });
-        // res.redirect("/play");
     }
     catch (error) {
         console.error("Login User Error:", error);
